@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+
 @RestController
 @SpringBootApplication
 public class MainWebApplication {
@@ -16,6 +18,8 @@ public class MainWebApplication {
     }
 
     public static void main(String[] args) {
+
+        ArrayList<String > a=new ArrayList<>();
         SpringApplication.run(MainWebApplication.class, args);
     }
 

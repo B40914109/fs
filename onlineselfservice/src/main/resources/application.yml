@@ -5,4 +5,6 @@ spring:
 
 #server:
 #  servlet:
+logging:
+  config: classpath:log.xml
 #    context-path: /abc

@@ -4,11 +4,13 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.extern.slf4j.Slf4j;
 
 import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.Date;
 
+@Slf4j
 public class TokenGenerator {
     private static final String SECRET_KEY = "e6MSMcPtHNp7pz4dXiBGW+/vX+N3bEsNJIzR8r1KHBc=";
     private static final long EXPIRATION_TIME = 3600000;
