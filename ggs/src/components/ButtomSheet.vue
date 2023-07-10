@@ -21,12 +21,7 @@ export default {
 
             }
 
-            const hasCustomEvent = Object.keys(this.$listeners).includes('cancel');
 
-if (hasCustomEvent) {
-  // 组件定义了'custom-event'事件
-    console.log("aaaaaaaaaaa*****************bbbbbbbbb");
-}
 
       console.log("User-defined button click");
 
