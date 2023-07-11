@@ -23,6 +23,38 @@ app.directive('open', {
     }
   });
 
+  app.directive('active', {
+    mounted(el, binding) {
+      // 根据传递的值确定是否添加active类
+      if (binding.value) {
+        el.classList.add('active');
+      } else {
+        el.classList.remove('active');
+      }
+    },
+    updated(el, binding) {
+      // 在更新时处理指令的值变化
+      if (binding.value) {
+        el.classList.add('active');
+      } else {
+        el.classList.remove('active');
+      }
+    }
+  });
+
+
+  // 注册自定义指令
+Vue.directive('my-directive',  {
+    mounted(el, binding, vnode) {
+      vnode.ctx.myMethod = function() {
+        console.log('Custom method called');
+        // 在这里执行你想要的操作
+      };
+    },
+    unmounted(el, binding, vnode) {
+      vnode.ctx.myMethod = null; // 清除方法
+    }
+  });
 
   app.directive('copy',{
     beforeMount(el, binding) {
