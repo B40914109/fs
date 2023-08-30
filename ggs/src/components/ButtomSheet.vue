@@ -28,6 +28,7 @@ export default {
             this.$emit('cancel',"aaa");
     },
         test2(){
+
             this.$emit('submit',"bbb");
         }
     },

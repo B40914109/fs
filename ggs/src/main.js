@@ -1,8 +1,25 @@
-import { createApp } from 'vue'
+import {ref, createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
 var app= createApp(App);
+const language = ref('zh');
+
+app.directive('localize', {
+  mounted(el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => {
+      language.value = language.value === 'en' ? 'zh' : 'en';
+    });
+  },
+  updated(el) {
+    if (language.value === 'en') {
+      el.textContent = 'Click me to change language';
+    } else {
+      el.textContent = '点击我切换语言';
+    }
+  },
+});
 
 app.directive('open', {
     mounted(el) {
@@ -44,7 +61,7 @@ app.directive('open', {
 
 
   // 注册自定义指令
-Vue.directive('my-directive',  {
+app.directive('my-directive',  {
     mounted(el, binding, vnode) {
       vnode.ctx.myMethod = function() {
         console.log('Custom method called');
