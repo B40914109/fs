@@ -270,6 +270,7 @@ app.directive('dragZoom', {
 
 
 
+console.log(11);
 
 
 

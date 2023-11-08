@@ -4,7 +4,11 @@
             <!-- <div class="header">
             header
         </div> -->
-            <div class="main" v-dragZoom id="draggable-element">
+            <iframe border="1" src="/index2.html">
+
+            </iframe>
+
+            <!-- <div class="main" id="draggable-element">
                 main<br />
                 main<br />
                 main<br />
@@ -13,9 +17,9 @@
                 main<br />
                 main<br />
 
-            </div>
+            </div> -->
             <div class="footer">
-                footer
+                footer12121
             </div>
         </div>
     </div>
@@ -192,7 +196,6 @@ export default {
             let offsetX, offsetY;
 
             target.addEventListener("touchstart", (e) => {
-              
                 const touch = e.touches[0];
                 // console.log(touch,touch.clientX ,touch.clientY);
                 offsetX = touch.clientX - target.getBoundingClientRect().left;
@@ -229,30 +232,36 @@ export default {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <style lang="scss">
 * {
     box-sizing: border-box;
 }
 
+iframe {
+    position: absolute;
+    top: 0;
+    bottom: 77px;
+
+    width: 100%;
+    height: calc(100% - 77px);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 77px;
+    width: 100%;
+    border: 1px solid red;
+}
 .page1 {
     position: fixed;
-    top: 20px;
-    bottom: 20px;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     border: 1px solid red;
+    overflow: none;
+    background-color: yellow;
 }
 
 .page {
@@ -261,36 +270,36 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
+    // -webkit-overflow-scrolling: touch;
 
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    // display: grid;
+    // grid-template-rows: auto 1fr auto;
     // min-height: 100%;
     // height: 100%;
     // min-height: 0;
 
     overflow: auto;
 
-    &::before {
-        content: "";
-        display: block;
-        width: 100%;
-        min-height: 3rem;
-        border: 1px solid blue;
-    }
+    // &::before {
+    //     content: "";
+    //     display: block;
+    //     width: 100%;
+    //     min-height: 3rem;
+    //     border: 1px solid blue;
+    // }
 }
 
 .header {
     height: 3rem;
-    border: 1px solid blue;
+    // border: 1px solid blue;
 
     // flex-basis: auto;
-    flex: 0 0 auto; /* 固定高度 */
 }
-.footer {
-    height: 5rem;
-    border: 1px solid blue;
-    flex: 0 0 auto; /* 固定高度 */
-}
+// .footer {
+//     height: 5rem;
+//     // border: 1px solid blue;
+//     flex: 0 0 auto; /* 固定高度 */
+// }
 
 .main {
     will-change: transform;
@@ -301,6 +310,6 @@ export default {
     background-color: yellow;
     height: 300px;
     width: 300px;
-    box-shadow: 1px 5px 10px gray;
+    // box-shadow: 1px 5px 10px gray;
 }
 </style>
