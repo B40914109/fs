@@ -1,0 +1,20 @@
+.page {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: yellow;
+
+}
+h1 {
+    color: get(red, blue);
+}
+
+body {
+    display: grid;
+    gap: 1rem;
+  }

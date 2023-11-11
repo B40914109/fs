@@ -1,12 +1,13 @@
 <template>
     <div class="page1">
         <div class="page">
+            <h1>hello</h1>
             <!-- <div class="header">
             header
         </div> -->
-            <iframe border="1" src="/index2.html">
+            <!-- <iframe border="1" src="/index2.html">
 
-            </iframe>
+            </iframe> -->
 
             <!-- <div class="main" id="draggable-element">
                 main<br />
@@ -237,6 +238,20 @@ export default {
     box-sizing: border-box;
 }
 
+:root {
+    --theme: 1; // 默认主题颜色
+    --color-theme-light: red;
+    --color-theme-dark: blue;
+}
+
+.theme-light {
+    --theme: 1;
+}
+
+.theme-dark {
+    --theme: 2;
+}
+
 iframe {
     position: absolute;
     top: 0;
@@ -270,46 +285,12 @@ iframe {
     bottom: 0;
     left: 0;
     right: 0;
-    // -webkit-overflow-scrolling: touch;
-
-    // display: grid;
-    // grid-template-rows: auto 1fr auto;
-    // min-height: 100%;
-    // height: 100%;
-    // min-height: 0;
-
-    overflow: auto;
-
-    // &::before {
-    //     content: "";
-    //     display: block;
-    //     width: 100%;
-    //     min-height: 3rem;
-    //     border: 1px solid blue;
-    // }
+    h1 {
+        color: get(red, rgb(63, 16, 231));
+    }
 }
 
 .header {
     height: 3rem;
-    // border: 1px solid blue;
-
-    // flex-basis: auto;
-}
-// .footer {
-//     height: 5rem;
-//     // border: 1px solid blue;
-//     flex: 0 0 auto; /* 固定高度 */
-// }
-
-.main {
-    will-change: transform;
-    position: absolute;
-    transform-origin: center center;
-    transform: scale(1);
-    // flex: 1;
-    background-color: yellow;
-    height: 300px;
-    width: 300px;
-    // box-shadow: 1px 5px 10px gray;
 }
 </style>

@@ -6,25 +6,35 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
-    chainWebpack: (config) => {
-        config.plugins.delete('html');
-        config.plugin('custom-html').use(HtmlWebpackPlugin, [
-            {
-                template: 'public/index.html',
-                minify: {
-                    removeComments: false,
-                    // 其他 minify 选项
+    css: {
+        loaderOptions: {
+            postcss: {
+                postcssOptions: {
+                    config: '.postcssrc.js'
                 },
-                BASE_URL: '/',
+                execute: true
             }
-        ]);
+        }
+    },
+    chainWebpack: config => {
+        // config.module
+        //     .rule('scss')
+        //     .use('dynamicCssVariableLoader')
+        //     .loader('./dynamicCssVariableLoader.js')
+        //     .before('sass-loader') // 确保在 sass-loader 之前使用
+        //     .end();
 
-        // config.plugin('html').tap((args) => {
-        //     args[0].minify = {
-        //         removeComments: false,
-        //     };
-        //     return args;
-        // });
+        // config.module
+        //     .rule('scss')
+        //     .use('postcss-loader')
+        //     .loader('postcss-loader')
+        //     .tap(options => {
+        //         options.postcssOptions = {
+        //             config: './postcss.config.js',
+        //         };
+        //         return options;
+        //     });
+
     },
     configureWebpack: {
         plugins: [
