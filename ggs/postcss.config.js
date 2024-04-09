@@ -1,7 +1,7 @@
 // postcss.config.js
 module.exports = {
     plugins: [
-        require('./postcss-plugin')
+        // require('./postcss-plugin')
         // function (css) {
         //     console.log("*()))))))))))))))))))))))))")
         //     css.walkDecls(decl => {

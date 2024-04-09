@@ -27,23 +27,23 @@ module.exports = {
     //     }
     // }
     chainWebpack: config => {
-        config.module
-            .rule('scss')
-            .use('dynamicCssVariableLoader')
-            .loader('./dynamicCssVariableLoader.js')
-            .before('sass-loader') // 确保在 sass-loader 之前使用
-            .end();
+        // config.module
+        //     .rule('scss')
+        //     .use('dynamicCssVariableLoader')
+        //     .loader('./dynamicCssVariableLoader.js')
+        //     .before('sass-loader') // 确保在 sass-loader 之前使用
+        //     .end();
 
-        config.module
-            .rule('scss')
-            .use('postcss-loader')
-            .loader('postcss-loader')
-            .tap(options => {
-                options.postcssOptions = {
-                    config: './postcss.config.js',
-                };
-                return options;
-            });
+        // config.module
+        //     .rule('scss')
+        //     .use('postcss-loader')
+        //     .loader('postcss-loader')
+        //     .tap(options => {
+        //         options.postcssOptions = {
+        //             config: './postcss.config.js',
+        //         };
+        //         return options;
+        //     });
 
     },
     configureWebpack: {
