@@ -1,7 +1,7 @@
 const postcss = require('postcss');
 var cache = {};
 
-module.exports = postcss.plugin('custom-theme-plugin', () => {
+module.exports = postcss.plugin('css-pick-theme-plugin', () => {
     console.log("hello...");
     return (root) => {
         root.walkRules((rule) => {

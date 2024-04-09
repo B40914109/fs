@@ -1,6 +1,7 @@
 package com.bmwfs;
 
 import com.bmwfs.configs.MultipleDispatcherServletConfig;
+import com.bmwfs.configs.MyClass;
 import com.bmwfs.utils.TokenGenerator;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.boot.ApplicationRunner;
@@ -33,6 +34,8 @@ public class MainWebApplication {
 //    }
 
     public static void main(String[] args) {
+
+        System.out.println(MyClass.field1);
 
         SpringApplication.run(MainWebApplication.class, args);
 

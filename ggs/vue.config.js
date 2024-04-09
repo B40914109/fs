@@ -6,34 +6,44 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
-    css: {
-        loaderOptions: {
-            postcss: {
-                postcssOptions: {
-                    config: '.postcssrc.js'
-                },
-                execute: true
-            }
-        }
-    },
+    // css: {
+    //     loaderOptions: {
+    //         postcss: {
+    //             postcssOptions: {
+    //                 config: '.postcssrc.js'
+    //             },
+    //             execute: true
+    //         }
+    //     }
+    // },
+    // css: {
+    //     loaderOptions: {
+    //         postcss: {
+    //             plugins: [
+    //                 require('autoprefixer') // 示例：使用 Autoprefixer 插件添加 CSS 前缀
+    //                 // 添加其他的 PostCSS 插件
+    //             ]
+    //         }
+    //     }
+    // }
     chainWebpack: config => {
-        // config.module
-        //     .rule('scss')
-        //     .use('dynamicCssVariableLoader')
-        //     .loader('./dynamicCssVariableLoader.js')
-        //     .before('sass-loader') // 确保在 sass-loader 之前使用
-        //     .end();
+        config.module
+            .rule('scss')
+            .use('dynamicCssVariableLoader')
+            .loader('./dynamicCssVariableLoader.js')
+            .before('sass-loader') // 确保在 sass-loader 之前使用
+            .end();
 
-        // config.module
-        //     .rule('scss')
-        //     .use('postcss-loader')
-        //     .loader('postcss-loader')
-        //     .tap(options => {
-        //         options.postcssOptions = {
-        //             config: './postcss.config.js',
-        //         };
-        //         return options;
-        //     });
+        config.module
+            .rule('scss')
+            .use('postcss-loader')
+            .loader('postcss-loader')
+            .tap(options => {
+                options.postcssOptions = {
+                    config: './postcss.config.js',
+                };
+                return options;
+            });
 
     },
     configureWebpack: {

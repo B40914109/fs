@@ -3,6 +3,6 @@ module.exports = {
         // autoprefixer: {},
         require('autoprefixer'),
         // require('./cssPluginRed'),
-        require('./cssPluginGet')
+        require('./css-pick-theme-plugin')
     ]
 };
