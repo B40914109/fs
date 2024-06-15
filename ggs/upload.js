@@ -11,6 +11,7 @@ const configs = {
     password: "461400",
 };
 
+//console.log('abc')
 //console.log('abnc')
 // startZip();
 
