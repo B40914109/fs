@@ -13,6 +13,7 @@ const configs = {
 
 //console.log('abc')
 //console.log('abnc')
+//暂时
 // startZip();
 
 function startZip() {
