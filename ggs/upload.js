@@ -5,6 +5,7 @@ const { NodeSSH } = require('node-ssh');
 const ssh = new NodeSSH();
 const srcPath = path.resolve(__dirname, './dist');
 const configs = {
+
     host: "192.168.79.128",
     port: 22,
     username: "root",
