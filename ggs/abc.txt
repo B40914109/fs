@@ -1,18 +1,5 @@
-import { ref, createApp } from 'vue'
-import App from './App.vue'
-import Test from "./components/Test.vue";
-import { h } from "vue";
+abc
 
 
-function addDynamicComponent(app, component) {
-    // debugger;
-    // 创建一个新的组件实例
-    const instance = app.mount(document.createElement('div'));
 
-    // 将传递的组件注册到根实例中
-    app.component("Test", component);
-
-    // 将动态添加的组件挂载到新的组件实例上
-    instance.component = component;
-
-    // 渲染动态添加的组件
+afewfew
