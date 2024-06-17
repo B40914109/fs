@@ -5,6 +5,7 @@ module.exports = postcss.plugin('custom-theme-plugin', () => {
     return (root) => {
         root.walkRules((rule) => {
             rule.walkDecls((decl) => {
+//dev1
                 if (decl.value.includes('pick')) {
                     // 使用正则表达式提取 get 函数的参数
                     const match = decl.value.match(/pick\(([^,]+),\s*([^)]+)\)/);
