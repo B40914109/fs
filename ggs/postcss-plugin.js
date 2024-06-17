@@ -11,7 +11,7 @@ module.exports = postcss.plugin('custom-theme-plugin', () => {
                     const match = decl.value.match(/pick\(([^,]+),\s*([^)]+)\)/);
                     if (match) {
                         const variableName = `--dy${Math.floor(Math.random() * 10000)}`;
-
+//master1
                         // 获取 get 函数的参数值
                         const v1 = match[1];
                         const v2 = match[2];
