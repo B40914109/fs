@@ -1,4 +1,4 @@
  consoe.log(M5);
 hello.word
  aaaaaaaaaa
- consoe.log(M4);
+ consoe1("f1");
