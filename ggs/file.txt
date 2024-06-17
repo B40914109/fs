@@ -6,3 +6,5 @@ hello.word
     consoe1("f3");
     conso.llog("f4")
     consoe.log("f5")
+    consoe.log("f6");
+    consoe.log("f7")l;
