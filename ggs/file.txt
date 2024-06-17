@@ -7,4 +7,4 @@ hello.word
     conso.llog("f4")
     consoe.log("f5")
     consoe.log("f6");
-    consoe.log("f7")l;
+        consoe.log("f7")l;
