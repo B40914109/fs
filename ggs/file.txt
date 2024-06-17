@@ -4,3 +4,4 @@ hello.word
  consoe1("f1");
   consoe1("f2");
     consoe1("f3");
+    conso.llog("f4")
