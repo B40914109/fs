@@ -2,3 +2,4 @@
 hello.word
  aaaaaaaaaa
  consoe1("f1");
+  consoe1("f2");
