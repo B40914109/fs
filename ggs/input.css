@@ -1,9 +1,0 @@
-h1 {
-    color: get(red, rgb(63, 16, 231));
-}
-
-
-.page{
-    border: 1px solid red;
-}
-
