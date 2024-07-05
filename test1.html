@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adjust Button Position on Keyboard Open</title>
+    <style>
+        /* 按钮样式 */
+        .fixed-button {
+            position: absolute;
+            top: 20px; /* 初始位置 */
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 输入框 -->
+    <input type="text" id="myInput" placeholder="Type here...">
+
+    <!-- 固定定位的按钮 -->
+    <button class="fixed-button">Fixed Button</button>
+
+    <script>
+  var inputElement = document.getElementById('myInput');
+  var buttonElement = document.querySelector('.fixed-button');
+
+  // 监听输入框的焦点变化
+  inputElement.addEventListener('focus', function() {
+    // 调整按钮位置，避免被键盘遮挡
+    buttonElement.style.top = '60px';  // 例如，将按钮向下移动
+  });
+
+  inputElement.addEventListener('blur', function() {
+    // 恢复按钮初始位置
+    buttonElement.style.top = '20px';
+  });
+    </script>
+
+</body>
+</html>
